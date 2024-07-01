@@ -111,37 +111,56 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
+        title: "Frontend Developer",
+        company_name: "Rikaar Films",
         icon: starbucks,
         iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        date: "October 2022 - Jan 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Created a captivating portfolio website for the photographer and successfully served as a front-end developer",
+            "Utilized HTML, CSS, and JavaScript to develop the website, ensuring it showcased the photographer's stunning work",
+            "To enhance the design process, I employed Figma for understanding the design requirements",
+            "Used Bootstrap framework to assure that the website seamlessly adapted to different devices, ensuring an enhanced user experience",
+            "Diligently tracked the website's progress across various versions using Git and GitHub",
+            "After completing the development phase, I ensured the website was accessible to users and had a unique online presence",
+            "Deployed the website on GoDaddy hosting platform, with the domain obtained from the same",
+        ]
+    },
+    {
+        title: "Full Stack Developer",
+        company_name: "Dynamite Technology Pvt Ltd",
+        icon: starbucks,
+        iconBg: "#accbe1",
+        date: "December 2022 - April 2023",
+        points: [
+            "Collaborated as a full stack developer at Dynamite Technology Pvt Limited, focused on developing a robust Learning Management System (LMS).",
+            "Utilized React.js for the frontend and Node.js for the backend, revamping the frontend interface and seamlessly integrating it with the backend.",
+            "Designed and implemented key frontend components, including a visually appealing landing page, user-friendly login/signup pages, interactive dashboards, engaging courses/games pages, and an edit personal info details page.",
+            "Integrated various React libraries, such as Zalter Identity for user authentication, Emotion for styling, Testing Library to ensure application reliability, React-countdown-circle-timer for visual enhancements, React-hook-form for efficient form integration, React-player for educational content playback, Recharts for displaying student progress charts, Sweetalert for responsive alerts, Web-vitals for performance analysis, and React Redux for state management.",
+            "Ensured a seamless user experience by incorporating a performance card displaying students' scores and progress details.",
+            "Employed Web-vitals to measure and optimize the application's performance, enhancing overall user satisfaction.",
+            "Contributed to a comprehensive Learning Management System, facilitating effective education delivery and improving student engagement.",
         ],
     },
     {
         title: "React Native Developer",
-        company_name: "Tesla",
+        company_name: "Bvision Technologies",
         icon: tesla,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "May 2023 - June 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
+            "Developed community emergency application using React Native for public safety, enabling instant PUSH notifications to user groups",
+            "Utilized Firebase for Authentication, Messaging, and real-time emergency alerts, effectively enhancing security during critical situations",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
+        title: "Product Developer",
+        company_name: "Songdew",
         icon: shopify,
         iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        date: "May 2024 - July 2024",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -168,17 +187,17 @@ export const socialLinks = [
     {
         name: 'Contact',
         iconUrl: contact,
-        link: '/contact',
+        link: 'https://api.whatsapp.com/send?text=Hi Harsh! I got here from the 3D portfolio. I would like to talk to you about a project. My name is [Your Name]&phone=[Your Phone Number]',
     },
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/harshkhasbage77',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/harshkhasbage77',
     }
 ];
 
