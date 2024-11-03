@@ -17,12 +17,12 @@ const Footer = () => {
         </p>
 
         <div className='flex gap-3 justify-center items-center'>
-          {socialLinks.map((link) => (
+          {socialLinks.map((link, index) => (
             <Link key={link.name} to={link.link} target='_blank'>
               <img
                 src={link.iconUrl}
                 alt={link.name}
-                className='w-6 h-6 object-contain'
+                className={`object-contain ${index === 1 ? 'w-9 h-9' : 'w-6 h-6'}`}
               />
             </Link>
           ))}
@@ -32,4 +32,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer

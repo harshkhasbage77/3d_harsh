@@ -11,7 +11,6 @@ import {
     javascript,
     linkedin,
     mongodb,
-    motion,
     mui,
     nextjs,
     nodejs,
@@ -23,7 +22,15 @@ import {
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    whatsapp,
+    rikaar,
+    dynamite,
+    bvision,
+    songdew,
+    metadrob,
+    remotion,
+    threejs
 } from "../assets/icons";
 
 export const skills = [
@@ -63,9 +70,14 @@ export const skills = [
         type: "Database",
     },
     {
-        imageUrl: motion,
-        name: "Motion",
+        imageUrl: remotion,
+        name: "Remotion",
         type: "Animation",
+    },
+    {
+        imageUrl: threejs,
+        name: "Three.js",
+        type: "3D Graphics",
     },
     {
         imageUrl: mui,
@@ -113,8 +125,8 @@ export const experiences = [
     {
         title: "Frontend Developer",
         company_name: "Rikaar Films",
-        icon: starbucks,
-        iconBg: "#accbe1",
+        icon: rikaar,
+        iconBg: "#d2b48c",
         date: "October 2022 - Jan 2023",
         points: [
             "Created a captivating portfolio website for the photographer and successfully served as a front-end developer",
@@ -129,8 +141,8 @@ export const experiences = [
     {
         title: "Full Stack Developer",
         company_name: "Dynamite Technology Pvt Ltd",
-        icon: starbucks,
-        iconBg: "#accbe1",
+        icon: dynamite,
+        iconBg: "#fbc3bc",
         date: "December 2022 - April 2023",
         points: [
             "Collaborated as a full stack developer at Dynamite Technology Pvt Limited, focused on developing a robust Learning Management System (LMS).",
@@ -145,8 +157,8 @@ export const experiences = [
     {
         title: "React Native Developer",
         company_name: "Bvision Technologies",
-        icon: tesla,
-        iconBg: "#fbc3bc",
+        icon: bvision,
+        iconBg: "#89cff0",
         date: "May 2023 - June 2023",
         points: [
             "Developed community emergency application using React Native for public safety, enabling instant PUSH notifications to user groups",
@@ -158,22 +170,23 @@ export const experiences = [
     {
         title: "Product Developer",
         company_name: "Songdew",
-        icon: shopify,
-        iconBg: "#b7e4c7",
+        icon: songdew,
+        iconBg: "#0037ff",
         date: "May 2024 - July 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developed an online video editor for the Track Tales feature using the Next.js framework, enabling artists to create videos sharing their song inspirations.",
+            "Utilized MobX and Context API for efficient state management, and integrated React/ffmpeg and MediaRecorder API for video processing, recording, and editing.",
+            "Implemented HTML5 Canvas for custom video rendering and developed real-time video preview and playback features to enhance user experience.",
+            "Created custom video filters and effects, ensuring high-quality video output and creative flexibility.",
+            "Ensured code scalability and maintainability through proper documentation, code reviews, and Agile collaboration, using Git for version control.",
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        title: "Three.js Developer",
+        company_name: "Metadrob",
+        icon: metadrob,
+        iconBg: "#000000",
+        date: "July 2024 - Present",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -183,11 +196,20 @@ export const experiences = [
     },
 ];
 
+    const phoneNumber = '7030067932';
+    const defaultMessage = `Hi Harsh! I saw your 3D portfolio. I would like to talk to you about a project. My name is [Your Name].`;
+
+
 export const socialLinks = [
     {
         name: 'Contact',
         iconUrl: contact,
-        link: 'https://api.whatsapp.com/send?text=Hi Harsh! I got here from the 3D portfolio. I would like to talk to you about a project. My name is [Your Name]&phone=[Your Phone Number]',
+        link: `tel:+91${phoneNumber}`,
+    },
+    {
+        name: 'WhatsApp',
+        iconUrl: whatsapp,
+        link: `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`,
     },
     {
         name: 'GitHub',

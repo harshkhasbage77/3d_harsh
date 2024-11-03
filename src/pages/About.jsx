@@ -38,6 +38,7 @@ const About = () => {
                   src={skill.imageUrl}
                   alt={skill.name}
                   className='w-1/2 h-1/2 object-contain'
+                  title={skill.name}
                 />
               </div>
             </div>
