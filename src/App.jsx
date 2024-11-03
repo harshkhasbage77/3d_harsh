@@ -9,9 +9,9 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/3d_harsh/' element={<Home />} />
           <Route
-            path='/*'
+            path='/3d_harsh/*'
             element={
               <>
                 <Routes>
