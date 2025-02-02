@@ -14,6 +14,14 @@ import tailwindcss from './tailwindcss.svg'
 import typescript from './typescript.svg'
 import remotion from './remotion.svg'
 import threejs from './threejs.png'
+import reactNative from './atom.png'
+import expo from './client.png'
+import django from './django.png'
+import python from './python.png'
+import postgre from './postgre.png'
+import mysql from './mysql.png'
+import supabase from './supabase.svg'
+import firebase from './firebase.svg'
 
 import car from './car.svg'
 import estate from './estate.svg'
@@ -38,6 +46,17 @@ import bvision from './bvision.png'
 import songdew from './S_logo_RGB.png'
 import metadrob from './metadrob.png'
 
+import pytorch from './pytorch.svg'
+import gymnasium from './Gymnasium.svg'
+import tensorflow from './TensorFlow.png'
+import opencv from './OpenCV.png'
+import scikitlearn from './Scikit-learn.png'
+import pandas from './Pandas.png'
+import numpy from './NumPy.svg'
+import matplotlib from './matplotlib.webp'
+import googlecolab from './GoogleColab.png'
+import kaggle from './Kaggle.png'
+import jupyter from './Jupyter.svg'
 
 export {
     css,
@@ -57,6 +76,25 @@ export {
     tailwindcss,
     typescript,
     threejs,
+    reactNative,
+    expo,
+    django,
+    python,
+    postgre,
+    mysql,
+    supabase,
+    firebase,
+    pytorch,
+    gymnasium,
+    tensorflow,
+    opencv,
+    scikitlearn,
+    pandas,
+    numpy,
+    matplotlib,
+    googlecolab,
+    kaggle,
+    jupyter,
 
     car,
     estate,
