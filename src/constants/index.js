@@ -1,6 +1,8 @@
 import { meta, shopify, starbucks, tesla } from "../assets/images";
 import {
     car,
+    videocamera,
+    personalinfo,
     contact,
     css,
     estate,
@@ -50,6 +52,7 @@ import {
     googlecolab,
     kaggle,
     jupyter,
+    pcb,
 } from "../assets/icons";
 
 export const skills = [
@@ -286,10 +289,8 @@ export const experiences = [
             "Collaborated as a full stack developer at Dynamite Technology Pvt Limited, focused on developing a robust Learning Management System (LMS).",
             "Utilized React.js for the frontend and Node.js for the backend, revamping the frontend interface and seamlessly integrating it with the backend.",
             "Designed and implemented key frontend components, including a visually appealing landing page, user-friendly login/signup pages, interactive dashboards, engaging courses/games pages, and an edit personal info details page.",
-            "Integrated various React libraries, such as Zalter Identity for user authentication, Emotion for styling, Testing Library to ensure application reliability, React-countdown-circle-timer for visual enhancements, React-hook-form for efficient form integration, React-player for educational content playback, Recharts for displaying student progress charts, Sweetalert for responsive alerts, Web-vitals for performance analysis, and React Redux for state management.",
             "Ensured a seamless user experience by incorporating a performance card displaying students' scores and progress details.",
             "Employed Web-vitals to measure and optimize the application's performance, enhancing overall user satisfaction.",
-            "Contributed to a comprehensive Learning Management System, facilitating effective education delivery and improving student engagement.",
         ],
     },
     {
@@ -338,46 +339,94 @@ export const socialLinks = [
 ];
 
 export const projects = [
+    // {
+    //     iconUrl: pricewise,
+    //     theme: 'btn-back-red',
+    //     name: 'Amazon Price Tracker',
+    //     description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
+    //     link: 'https://github.com/adrianhajdin/pricewise',
+    // },
+    // {
+    //     iconUrl: threads,
+    //     theme: 'btn-back-green',
+    //     name: 'Full Stack Threads Clone',
+    //     description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
+    //     link: 'https://github.com/adrianhajdin/threads',
+    // },
+    // {
+    //     iconUrl: car,
+    //     theme: 'btn-back-blue',
+    //     name: 'Car Finding App',
+    //     description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
+    //     link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+    // },
+    // {
+    //     iconUrl: snapgram,
+    //     theme: 'btn-back-pink',
+    //     name: 'Full Stack Instagram Clone',
+    //     description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
+    //     link: 'https://analyze-appropriate.streamlit.app/',
+    // },
+    // {
+    //     iconUrl: estate,
+    //     theme: 'btn-back-black',
+    //     name: 'Real-Estate Application',
+    //     description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
+    //     link: 'https://github.com/adrianhajdin/projects_realestate',
+    // },
+    // {
+    //     iconUrl: summiz,
+    //     theme: 'btn-back-yellow',
+    //     name: 'AI Summarizer Application',
+    //     description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
+    //     link: 'https://github.com/harshkhasbage77/PCB-Object-Detection-App',
+    // },    
     {
-        iconUrl: pricewise,
+        iconUrl: pcb,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        name: 'Printed Circuit Board Object Detection',
+        description: 'The application detects and classifies the components on a PCB using a pre-trained YOLOv5 model.',
+        // sourcecode: 'https://github.com/harshkhasbage77/PCB-Object-Detection-App',
+        link: 'https://harshkhasbage77-pcb-object-detection-app-streamlit-app-hxttae.streamlit.app/',
     },
     {
-        iconUrl: threads,
+        iconUrl: 'https://raw.githubusercontent.com/harshkhasbage77/React-Flow-Graphs-frontend/main/public/play-button.png',
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'No-Code AI Automation Platform',
+        description: 'React-Flow Fronted demonstrating node abstraction and Flask backend that identifies if the graph is Directed Acyclic Graph',
+        // sourcecode: 'https://github.com/harshkhasbage77/React-Flow-Graphs-frontend',
+        link: 'https://react-flow-graphs-frontend.vercel.app/',
     },
     {
-        iconUrl: car,
+        iconUrl: videocamera,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'Online Video Editor',
+        description: `Designed and built a personalised video editor using fabric.js to make specific kind of videos called track-tales.`,
+        // sourcecode: 'https://github.com/harshkhasbage77/track-tale',
+        link: 'https://track-tale.vercel.app/',
     },
     {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
-    },
-    {
-        iconUrl: estate,
+        iconUrl: personalinfo,
         theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        name: 'Privacy Comparison in Indian vs US Apps',
+        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
+        // sourcecode: 'https://github.com/harshkhasbage77/USP_Project',
+        link: 'https://analyze-appropriate.streamlit.app/',
     },
     {
-        iconUrl: summiz,
+        iconUrl: rikaar,
         theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        name: 'Photography Portfolio',
+        description: 'Created a responsive landing page for a photography agency, showcasing the brand and its works in an engaging and interactive way.',
+        link: 'http://www.rikaarfilms.com',
+    },
+    {
+        iconUrl: 'https://raw.githubusercontent.com/harshkhasbage77/CodeClub-AlienHunter-PyGame/main/player.png',
+        theme: 'btn-back-pink',
+        name: 'Alien Hunter Game',
+        description: 'Developed a 2D game using Pygame, where the player has to shoot down the aliens to score points and win the game.',
+        link: 'https://github.com/harshkhasbage77/CodeClub-AlienHunter-PyGame',
     }
+
+    
 ];

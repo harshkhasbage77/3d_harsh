@@ -24,10 +24,13 @@ import supabase from './supabase.svg'
 import firebase from './firebase.svg'
 
 import car from './car.svg'
+import videocamera from './video-camera.png'
+import personalinfo from './personal-information.png'
 import estate from './estate.svg'
 import pricewise from './pricewise.svg'
 import snapgram from './snapgram.svg'
 import summiz from './summiz.svg'
+import pcb from './pcb-board.png'
 import threads from './threads.svg'
 import arrow from './arrow.svg'
 
@@ -97,10 +100,13 @@ export {
     jupyter,
 
     car,
+    videocamera,
     estate,
+    personalinfo,
     pricewise,
     snapgram,
     summiz,
+    pcb,
     threads,
     arrow,
     
