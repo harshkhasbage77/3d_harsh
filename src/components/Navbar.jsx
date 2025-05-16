@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import './Navbar.css';
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { HK77_Logo, HK77_Logo_layout, HK77_Logo_symbol, logo } from "../assets/images";
 
@@ -17,11 +17,32 @@ import { HK77_Logo, HK77_Logo_layout, HK77_Logo_symbol, logo } from "../assets/i
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
 
-  const isMobile = width <= 768;
+  const menuRef = useRef(null);      // ref for the nav menu
+  const toggleBtnRef = useRef(null); // ref for the ☰ button
 
-  const [isMobileView, setIsMobileView] = useState(isMobile);
+  const hideNav = useNav();
+  console.log("hideNav: ", hideNav);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isMenuOpen && // Only run this logic when menu is open
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        toggleBtnRef.current &&
+        !toggleBtnRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]); // depend on isMenuOpen
 
   return (
     <header className='header'>
@@ -86,63 +107,68 @@ const Navbar = () => {
           Contact
         </NavLink>
       </nav>
+          
+      {/* {!hideNav &&  */}
+        <nav id="thisNav" 
+        ref={menuRef}
+        className={`md:hidden flex flex-col absolute top-4 right-16 sm:right-24 bg-slate-400/50 backdrop-blur-sm rounded-xl transition-all duration-300 ease-in-out 
+          ${isMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'}
+          `}
+          >
+            {/* ${hideNav ? 'hidden' : ''} */}
+          <a href="https://drive.google.com/file/d/1jcy0HGY258cbLxdDVWIHelD8DX0MxW_p/view?usp=drive_link" target="_blank">
+            <button type="button" className="button">
+              <span className="fold"></span>
 
-      <nav id="thisNav" 
-      className={`md:hidden flex flex-col absolute top-4 right-16 sm:right-24 bg-slate-400/50 backdrop-blur-sm rounded-xl transition-all duration-300 ease-in-out 
-        ${isMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'}`}
-    
-      >
-        <a href="https://drive.google.com/file/d/1jcy0HGY258cbLxdDVWIHelD8DX0MxW_p/view?usp=drive_link" target="_blank">
-          <button type="button" className="button">
-            <span className="fold"></span>
+              <div className="points_wrapper">
+                <i className="point"></i>
+                <i className="point"></i>
+                <i className="point"></i>
+                <i className="point"></i>
+                <i className="point"></i>
+                <i className="point"></i>
+                <i className="point"></i>
+                <i className="point"></i>
+                <i className="point"></i>
+                <i className="point"></i>
+              </div>
 
-            <div className="points_wrapper">
-              <i className="point"></i>
-              <i className="point"></i>
-              <i className="point"></i>
-              <i className="point"></i>
-              <i className="point"></i>
-              <i className="point"></i>
-              <i className="point"></i>
-              <i className="point"></i>
-              <i className="point"></i>
-              <i className="point"></i>
-            </div>
-
-            <span className="inner">
-                <svg
-                  className="icon"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  // stroke-linecap="round"
-                  // stroke-linejoin="round"
-                  // stroke-width="2.5"
-                >
-                  <path d="M14 2v6h6" />
-                  <path d="M4 4v16h16V8l-6-6H4z" />
-                  <path d="M8 12h1v4H8" />
-                  <path d="M11 12h1v4h-1" />
-                  <path d="M14 16h1v-4h-1" />
-                  <path d="M14 12h1v-1.5" />
-                </svg>
-              Resume
-            </span>
-          </button>
-        </a>
-        <NavLink to='/3d_harsh/about' className={({ isActive }) => isActive ? "text-blue-600 navbar-items" : "text-black navbar-items"}>
-          About
-        </NavLink>
-        <NavLink to='/3d_harsh/projects' className={({ isActive }) => isActive ? "navbar-items text-blue-600" : "navbar-items text-black"}>
-          Projects
-        </NavLink>
-        <NavLink to='/3d_harsh/contact' className={({ isActive }) => isActive ? "navbar-items text-blue-600" : "navbar-items text-black"}>
-          Contact
-        </NavLink>
-      </nav>
+              <span className="inner">
+                  <svg
+                    className="icon"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    // stroke-linecap="round"
+                    // stroke-linejoin="round"
+                    // stroke-width="2.5"
+                    >
+                    <path d="M14 2v6h6" />
+                    <path d="M4 4v16h16V8l-6-6H4z" />
+                    <path d="M8 12h1v4H8" />
+                    <path d="M11 12h1v4h-1" />
+                    <path d="M14 16h1v-4h-1" />
+                    <path d="M14 12h1v-1.5" />
+                  </svg>
+                Resume
+              </span>
+            </button>
+          </a>
+          <NavLink to='/3d_harsh/about' className={({ isActive }) => isActive ? "text-blue-600 navbar-items" : "text-black navbar-items"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            About
+          </NavLink>
+          <NavLink to='/3d_harsh/projects' className={({ isActive }) => isActive ? "navbar-items text-blue-600" : "navbar-items text-black"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            Projects
+          </NavLink>
+          <NavLink to='/3d_harsh/contact' className={({ isActive }) => isActive ? "navbar-items text-blue-600" : "navbar-items text-black"} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            Contact
+          </NavLink>
+        </nav>
+      {/* } */}
 
       <button 
+        ref={toggleBtnRef}
         className="md:hidden p-2"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
