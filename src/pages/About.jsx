@@ -4,13 +4,15 @@ import {
 } from "react-vertical-timeline-component";
 
 import { CTA } from "../components";
-import { experiences, skills } from "../constants";
+import { experiences, stack } from "../constants";
 
 import "react-vertical-timeline-component/style.min.css";
 
 const About = () => {
   return (
-    <section className='max-container'>
+    <section className='max-container relative'>
+      
+
       <h1 className='head-text'>
         Hello, I'm{" "}
         <span className='blue-gradient_text font-semibold drop-shadow'>
@@ -30,7 +32,7 @@ const About = () => {
         <h3 className='subhead-text'>My Skills</h3>
 
         <div className='mt-16 flex flex-wrap gap-12'>
-          {skills.map((skill) => (
+          {stack.map((skill) => (
             <div className='block-container w-20 h-20' key={skill.name}>
               <div className='btn-back rounded-xl' />
               <div className='btn-front rounded-xl flex justify-center items-center'>
@@ -63,7 +65,7 @@ const About = () => {
                 date={experience.date}
                 iconStyle={{ background: experience.iconBg }}
                 icon={
-                  <div className='flex justify-center items-center w-full h-full'>
+                  <div className='flex justify-center items-center w-full h-full cursor-pointer hover:scale-110 transition-all duration-300' onClick={() => window.open(experience.company_link, "_blank")}>
                     <img
                       src={experience.icon}
                       alt={experience.company_name}
@@ -86,7 +88,22 @@ const About = () => {
                     className='text-black-500 font-medium text-base'
                     style={{ margin: 0 }}
                   >
-                    {experience.company_name}
+                    <span className='text-blue-500 cursor-pointer hover:text-blue-600' onClick={() => window.open(experience.company_link, "_blank")}>{experience.company_name} 
+                    <svg
+                      className="inline-block ml-1 w-4 h-4"
+                      fill="none" 
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round" 
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                    </span>
                   </p>
                 </div>
 

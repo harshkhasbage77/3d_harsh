@@ -55,7 +55,7 @@ import {
     pcb,
 } from "../assets/icons";
 
-export const skills = [
+export const stack = [
     {
         imageUrl: react,
         name: "React",
@@ -242,9 +242,10 @@ export const experiences = [
     {
         title: "Three.js Developer",
         company_name: "Metadrob",
+        company_link: "https://www.metadrob.com/",
         icon: metadrob,
         iconBg: "#000000",
-        date: "July 2024 - Present",
+        date: "July 2024 - October 2024",
         points: [
             "Restructured the backend architecture from microservices to the Clean Architecture, enhancing maintainability, scalability and code clarity.",
             "Utilized technologies like WebGL, Three.js, Babylon.js, and React.js Three Fiber to develop no-code 3D Virtual Showroom Creation Platform.",
@@ -255,6 +256,7 @@ export const experiences = [
     {
         title: "Product Developer",
         company_name: "Songdew",
+        company_link: "https://songdew.com/",
         icon: songdew,
         iconBg: "#0037ff",
         date: "May 2024 - July 2024",
@@ -269,6 +271,7 @@ export const experiences = [
     {
         title: "React Native Developer",
         company_name: "Bvision Technologies",
+        company_link: "https://9melons.com/",
         icon: bvision,
         iconBg: "#89cff0",
         date: "May 2023 - June 2023",
@@ -282,6 +285,7 @@ export const experiences = [
     {
         title: "Full Stack Developer",
         company_name: "Dynamite Technology Pvt Ltd",
+        company_link: "https://www.dynamitetechnology.in/",
         icon: dynamite,
         iconBg: "#fbc3bc",
         date: "December 2022 - April 2023",
@@ -296,6 +300,7 @@ export const experiences = [
     {
         title: "Frontend Developer",
         company_name: "Rikaar Films",
+        company_link: "https://www.rikaarfilms.com/",
         icon: rikaar,
         iconBg: "#d2b48c",
         date: "October 2022 - Jan 2023",
@@ -385,7 +390,7 @@ export const projects = [
         iconUrl: pcb,
         theme: 'btn-back-red',
         name: 'Printed Circuit Board Object Detection',
-        description: 'The application detects and classifies the components on a PCB using a pre-trained YOLOv5 model.',
+        description: 'The application detects and classifies the components on a PCB using a YOLOv5 model.',
         // sourcecode: 'https://github.com/harshkhasbage77/PCB-Object-Detection-App',
         link: 'https://harshkhasbage77-pcb-object-detection-app-streamlit-app-hxttae.streamlit.app/',
     },

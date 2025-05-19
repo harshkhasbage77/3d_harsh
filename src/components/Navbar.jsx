@@ -21,9 +21,6 @@ const Navbar = () => {
   const menuRef = useRef(null);      // ref for the nav menu
   const toggleBtnRef = useRef(null); // ref for the ☰ button
 
-  const hideNav = useNav();
-  console.log("hideNav: ", hideNav);
-
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
